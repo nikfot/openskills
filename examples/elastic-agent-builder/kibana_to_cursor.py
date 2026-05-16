@@ -19,7 +19,6 @@ import yaml
 
 from openskills.adapters.elastic import from_elastic_payload
 
-
 EXAMPLE_KIBANA_SKILL = {
     "id": "triage-security-alerts",
     "name": "Triage Security Alerts",
@@ -60,7 +59,7 @@ def main() -> None:
 
     contract = from_elastic_payload(payload)
 
-    print(f"# Parsed as OpenSkills contract:")
+    print("# Parsed as OpenSkills contract:")
     print(f"#   Name: {contract.name}")
     print(f"#   Description: {contract.description}")
     print(f"#   Allowed tools: {contract.allowed_tools}")
